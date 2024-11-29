@@ -1,0 +1,649 @@
+/********** Template CSS **********/
+:root {
+    --primary: #FF0000;
+    /* Crvena iz logotipa */
+    --secondary: #000000;
+    /* Crna iz logotipa */
+    --light: #F7F7F7;
+    /* Svetlo siva za kontrast */
+    --dark: #333333;
+    /* Tamno siva za pozadine */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 30px;
+    bottom: 30px;
+    z-index: 99;
+}
+
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*** Button ***/
+.btn {
+    transition: all 0.3s ease-in-out;
+    font-weight: 500;
+    /* Umerena težina fonta */
+    text-transform: uppercase;
+    /* Sva slova velika za profesionalni izgled */
+    padding: 10px 20px;
+    border-radius: 5px;
+    /* Blago zaobljeni uglovi */
+}
+
+.btn.btn-primary {
+    background-color: #FF0000;
+    color: #FFFFFF;
+    border: 2px solid #FF0000;
+}
+
+.btn.btn-primary:hover {
+    background-color: #333333;
+    color: #FFFFFF;
+    border: 2px solid #333333;
+}
+
+
+
+/*** Navbar ***/
+.navbar {
+    background-color: white !important;
+    /* Crna boja pozadine */
+    color: #FFFFFF;
+    /* Bela boja teksta */
+}
+
+.navbar .navbar-brand img {
+    max-height: 60px;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: black;
+    /* Bela boja linkova */
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+.navbar-toggler {
+    background-color: var(--primary);
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%281, 1, 1, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+@media (max-width: 991.98px) {
+    .navbar .navbar-brand img {
+        max-height: 45px;
+    }
+
+    .navbar .navbar-nav {
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    .navbar .nav-item .dropdown-menu {
+        padding-left: 30px;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        border: none;
+        margin-top: 0;
+        top: 150%;
+        right: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}
+
+/*** Facts ***/
+.facts {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+
+
+.facts h1 {
+    color: #df0f0f !important;
+    /* Belo za brojeve sa prioritetom */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    /* Suptilna senka */
+    font-weight: bold;
+}
+
+.facts span {
+    color: #dcdcdc !important;
+    /* Svetlosiva za opis sa prioritetom */
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    /* Bolja profesionalnost */
+    letter-spacing: 1px;
+}
+
+
+
+/*** Header ***/
+
+
+
+
+
+
+
+
+
+
+
+.page-header {
+    background: linear-gradient(rgba(1, 10, 53, .8), rgba(1, 10, 53, .8)), url(../img/carousel-1.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.page-header .breadcrumb-item a,
+.page-header .breadcrumb-item+.breadcrumb-item::before {
+    color: var(--light);
+}
+
+.page-header .breadcrumb-item a:hover,
+.page-header .breadcrumb-item.active {
+    color: var(--primary);
+}
+
+
+/*** Service ***/
+/* Stilizacija samo za ikonice u ovoj sekciji */
+.container-xxl .service-item .service-icon {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FF0000 !important;
+    /* Crvena boja uz "!important" */
+    border-radius: 5px;
+    /* Blago zaobljeni uglovi */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.container-xxl .service-item .service-icon:hover {
+    background-color: #D00000 !important;
+    /* Tamnija crvena na hover uz "!important" */
+    transform: scale(1.05);
+}
+
+.container-xxl .service-item .service-icon img {
+    max-width: 60px;
+    max-height: 60px;
+}
+
+
+
+
+/*** Testimonial ***/
+.animated.pulse {
+    animation-duration: 1.5s;
+}
+
+.testimonial-left,
+.testimonial-right {
+    position: relative;
+}
+
+.testimonial-left img,
+.testimonial-right img {
+    position: absolute;
+    border-radius: 70px;
+}
+
+.testimonial-left img:nth-child(1),
+.testimonial-right img:nth-child(3) {
+    width: 70px;
+    height: 70px;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.testimonial-left img:nth-child(2),
+.testimonial-right img:nth-child(2) {
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+
+.testimonial-left img:nth-child(3),
+.testimonial-right img:nth-child(1) {
+    width: 50px;
+    height: 50px;
+    bottom: 10%;
+    right: 10%;
+}
+
+.testimonial-carousel .owl-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+}
+
+.testimonial-carousel .owl-nav {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.testimonial-carousel .owl-nav .owl-prev,
+.testimonial-carousel .owl-nav .owl-next {
+    margin: 0 5px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background: var(--primary);
+    border-radius: 45px;
+    font-size: 22px;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-nav .owl-prev:hover,
+.testimonial-carousel .owl-nav .owl-next:hover {
+    background: var(--secondary);
+}
+
+
+
+
+
+
+
+
+
+/*** Footer ***/
+.footer {
+    background-color: #000000 !important;
+    /* Crna pozadina */
+    color: #FFFFFF !important;
+    /* Bela boja za tekst */
+    padding: 10px 0 !important;
+    /* Manji padding za smanjenje visine */
+    text-align: center !important;
+    /* Centriran tekst */
+    border-top: none !important;
+    /* Uklanjanje linije */
+}
+
+.footer .copyright {
+    background-color: transparent !important;
+    /* Transparentna pozadina */
+    color: rgba(255, 255, 255, 0.7) !important;
+    /* Svetlija bela za tekst */
+    padding: 5px 0 !important;
+    /* Minimalan padding */
+    margin: 0 !important;
+    /* Bez margina */
+    font-size: 12px !important;
+    /* Manji tekst za kompaktan izgled */
+    line-height: 1.4 !important;
+    /* Smanjena visina linije */
+}
+
+.footer a {
+    color: #FF0000 !important;
+    /* Crvena boja za linkove */
+    text-decoration: none !important;
+    /* Bez podvlačenja */
+    font-weight: bold !important;
+    /* Podebljani tekst */
+    transition: color 0.3s ease !important;
+    /* Efekat prelaza */
+}
+
+.footer a:hover {
+    color: #FFFFFF !important;
+    /* Bela boja na hover */
+}
+
+
+
+
+
+
+
+.bg-dark {
+    background-color: inherit !important;
+    /* Nasleđivanje boje roditelja */
+}
+
+.text-center {
+    text-align: center !important;
+    /* Osiguranje centriranog teksta */
+}
+
+.container-fluid {
+    max-width: 100% !important;
+    padding: 0 !important;
+}
+
+
+
+
+
+
+
+/* Glavni naslov */
+.display-6 {
+    font-weight: bold;
+    color: var(--secondary);
+    /* Crna boja */
+}
+
+/* Sekundarni tekst */
+p.mb-4 {
+    color: #696969;
+    /* Tamnosiva za čitljivost */
+    line-height: 1.8;
+}
+
+/* Stil za dugmad u sekciji */
+.btn-square {
+    width: 30px !important;
+    height: 30px !important;
+    background-color: #FF0000 !important;
+    border-radius: 5px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-right: 5px !important;
+}
+
+
+
+.border-top .btn-square {
+    width: 30px;
+    height: 30px;
+    background-color: #FF0000;
+    /* Crvena */
+    border-radius: 5px;
+    /* Blago zaobljeni uglovi */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+
+
+.btn-square:hover {
+    background-color: var(--secondary);
+    /* Crna na hover */
+    transform: scale(1.1);
+    /* Lagano povećanje na hover */
+}
+
+
+/* Tekst u sekciji */
+h1.text-primary {
+    color: var(--primary);
+    /* Crvena boja za naslove */
+}
+
+.text-secondary {
+    color: var(--secondary);
+    /* Crna boja za podnaslove */
+}
+
+.text-muted {
+    color: #6c757d;
+    /* Svetlo siva za opisni tekst */
+}
+
+
+
+.btn-square-custom {
+    width: 70px;
+    height: 70px;
+    background-color: #FF0000;
+    /* Crvena iz logotipa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    /* Blago zaobljenje */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Suptilna senka */
+    transition: all 0.3s ease-in-out;
+    /* Efekat prelaza */
+}
+
+.btn-square-custom:hover {
+    background-color: #333333;
+    /* Tamno siva za hover efekat */
+    transform: translateY(-5px);
+    /* Blago podizanje na hover */
+}
+
+.btn-square-custom img {
+    max-width: 50%;
+    /* Ikonica prilagođena veličini dugmeta */
+}
+
+.text-secondary {
+    color: #FF0000;
+    /* Crvena boja za naslove */
+}
+
+.text-muted {
+    color: #333333;
+    /* Tamno siva za opisni tekst */
+}
+
+h1.display-6:not(.why-choose-title) {
+    color: #000000;
+    /* Boja za druge naslove osim "Zašto odabrati baš nas?" */
+}
+
+
+p.mb-5 {
+    color: #333333;
+    /* Tamno siva za opisni tekst ispod naslova */
+}
+
+.container-xxl {
+    margin-bottom: 30px;
+}
+
+.d-flex {
+    gap: 20px;
+    /* Razmak između dugmadi i teksta */
+}
+
+#why-choose-title {
+    margin-bottom: 40px;
+    /* Više prostora ispod naslova */
+}
+
+
+
+
+/* Generalni stilovi */
+.carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+.carousel-caption h1 {
+    color: #FFFFFF;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-caption p {
+    color: #DDDDDD;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption .btn-primary {
+    background-color: #FF0000;
+    border-color: #FF0000;
+    color: #FFFFFF;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.carousel-caption .btn-primary:hover {
+    background-color: #333333;
+    border-color: #333333;
+    color: #FFFFFF;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 3px solid #FF0000;
+    border-radius: 50%;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: #FF0000;
+    border-color: #333333;
+}
+
+.page-header {
+    background: linear-gradient(rgba(1, 10, 53, .8), rgba(1, 10, 53, .8)), url(../img/carousel-1.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 768px) {
+
+    /* Okvir za tekst (caption) */
+    #header-carousel .carousel-caption {
+        position: absolute;
+        bottom: 10%;
+        /* Niže pozicioniranje okvira */
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 80%;
+        /* Umanjena širina za skladniji prikaz */
+        padding: 10px;
+        /* Kompaktan padding */
+        background: rgba(0, 0, 0, 0.5);
+        /* Zatamnjenje za bolju čitljivost */
+        border-radius: 6px;
+        /* Zaobljeni uglovi */
+        text-align: center;
+    }
+
+    /* Naslov u caption-u */
+    #header-carousel .carousel-caption h1 {
+        font-size: 1.2rem;
+        /* Prilagođeni manji font za mobilne */
+        line-height: 1.3;
+        /* Manji razmak između redova */
+        color: #ffffff;
+        /* Bela boja za kontrast */
+        margin-bottom: 8px;
+        /* Manji razmak ispod naslova */
+    }
+
+    /* Tekst u caption-u */
+    #header-carousel .carousel-caption p {
+        font-size: 0.85rem;
+        /* Smanjen font za mobilne uređaje */
+        margin-bottom: 8px;
+        color: #dddddd;
+        /* Svetlije siva za čitljivost */
+    }
+
+    /* Dugme u caption-u */
+    #header-carousel .carousel-caption .btn-primary {
+        font-size: 0.8rem;
+        /* Manje dugme za mobilne */
+        padding: 6px 12px;
+        /* Kompaktan padding za dugme */
+        border-radius: 4px;
+        background-color: #FF0000;
+        /* Crvena boja */
+        color: #fff;
+    }
+
+    /* Slike u carousel-u */
+    #header-carousel .carousel-item img {
+        max-height: 250px;
+        /* Niža visina slike za skladniji prikaz */
+        object-fit: cover;
+        /* Slika uvek prilagođena dimenzijama */
+        width: 100%;
+    }
+
+    /* Navigacione strelice */
+    #header-carousel .carousel-control-prev-icon,
+    #header-carousel .carousel-control-next-icon {
+        width: 1.5rem;
+        /* Manje strelice za mobilne */
+        height: 1.5rem;
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Diskretna pozadina */
+        border-radius: 50%;
+    }
+
+    /* Hover efekat na strelicama */
+    #header-carousel .carousel-control-prev-icon:hover,
+    #header-carousel .carousel-control-next-icon:hover {
+        background-color: #FF0000;
+        /* Crvena boja na hover */
+    }
+}
