@@ -8,7 +8,6 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    color: white;
 }
 
 .hero {
@@ -46,14 +45,14 @@ body {
     color: white;
 }
 
-p {
+.hero p {
     font-size: 1.2rem;
     margin-bottom: 30px;
     color: rgba(255, 255, 255, 0.85);
     animation: fadeInUp 1s ease-in-out;
 }
 
-.btn {
+.hero .btn {
     display: inline-block;
     padding: 12px 30px;
     font-size: 1.1rem;
@@ -78,7 +77,7 @@ p {
     }
 }
 
-.btn:hover {
+.hero .btn:hover {
     background: #e0474c;
     box-shadow: 0 6px 14px rgba(255, 90, 95, 0.6);
 }
