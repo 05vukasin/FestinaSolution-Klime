@@ -70,7 +70,7 @@
 /* Responsivnost za manje ekrane */
 @media (max-width: 768px) {
     .client-card {
-        width: 220px;
+        width: 280px;
     }
     .client-card img {
         height: 150px;
@@ -82,10 +82,10 @@
 
 @media (max-width: 480px) {
     .client-card {
-        width: 180px;
+        width: 280px;
     }
     .client-card img {
-        height: 120px;
+        height: 220px;
     }
     .client-card h5 {
         font-size: 0.75rem;

@@ -1,0 +1,9 @@
+.client-card h5{
+    display: none;
+}
+.client-card img{
+    margin-bottom: 0;
+}
+.client-card {
+    padding: 0;
+}
