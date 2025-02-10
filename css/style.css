@@ -655,3 +655,16 @@ p.mb-5 {
         /* Crvena boja na hover */
     }
 }
+
+.pdv-obrazac{
+    background-color: #FF0000;
+    color: #fff;
+    font-size: 20px;
+    margin: 25px;
+    padding: 20px;
+    border:none;
+    border-radius: 10px;
+}
+.pdv-obrazac:hover{
+    background-color: #D00000;
+}
