@@ -668,3 +668,33 @@ p.mb-5 {
 .pdv-obrazac:hover{
     background-color: #D00000;
 }
+
+.home-pools img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .home-pools .row {
+        flex-direction: column;
+    }
+
+    .home-pools h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .home-pools p {
+        text-align: center;
+        font-size: 0.95rem;
+    }
+
+    .home-pools a.btn {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+    }
+}
